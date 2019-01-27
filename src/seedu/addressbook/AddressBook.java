@@ -104,7 +104,7 @@ public class AddressBook {
     private static final String COMMAND_ADD_DESC = "Adds a person to the address book.";
     private static final String COMMAND_ADD_PARAMETERS = "NAME "
                                                       + PERSON_DATA_PREFIX_PHONE + "PHONE_NUMBER "
-                                                      + PERSON_DATA_PREFIX_EMAIL + "EMAIL"
+                                                      + PERSON_DATA_PREFIX_EMAIL + "EMAIL "
                                                       + PERSON_DATA_PREFIX_ADDRESS + "ADDRESS";
     private static final String COMMAND_ADD_EXAMPLE = COMMAND_ADD_WORD + " John Doe p/98765432 "
                                                                        + "e/johnd@gmail.com "
@@ -1101,7 +1101,7 @@ public class AddressBook {
     }
 
     private static boolean isPersonAddressValid(String address) {
-        return address.matches("(\\w|\\s|\\d|,|#)+");
+        return address.matches("(\\w|\\s|\\d|\\S)+");
     }
 
 
